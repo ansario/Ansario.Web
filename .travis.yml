@@ -8,12 +8,14 @@ services:
 install:
   - echo "install nothing!" # put your normal pre-testing installs here
 
+before_script:
+  - cd ./Ansario.Web
+
 script:
   - echo "no tests!" # put your normal testing scripts here
 
 
 after_success:
-  - cd ./Ansario.Web
   - docker --version  # document the version travis is using
   - pip install --user awscli # install aws cli w/o sudo
   - export PATH=$PATH:$HOME/.local/bin # put aws in the path
