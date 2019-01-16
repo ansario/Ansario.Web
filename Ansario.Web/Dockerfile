@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["Ansario.Web/Ansario.Web.csproj", "Ansario.Web/"]
+COPY ["Ansario.Web.csproj", "Ansario.Web/"]
 RUN dotnet restore "Ansario.Web/Ansario.Web.csproj"
 COPY . .
 WORKDIR "/src/Ansario.Web"
