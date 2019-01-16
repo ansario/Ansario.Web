@@ -11,8 +11,9 @@ install:
 script:
   - echo "no tests!" # put your normal testing scripts here
 
+
 after_success:
-  - cd ./Ansario.web
+  - cd ./Ansario.Web
   - docker --version  # document the version travis is using
   - pip install --user awscli # install aws cli w/o sudo
   - export PATH=$PATH:$HOME/.local/bin # put aws in the path
